@@ -3,7 +3,7 @@ import powerpal_art as pk_art
 import console
 import random as rn
 from helpers import (Helpers, input_for_fight_decision,
-                     input_for_choose_undefeated_powerpal, input_for_pokeduel_determine_attack_mode,
+                     input_for_choose_undefeated_powerpal, input_for_powerduel_determine_attack_mode,
                      input_for_heal_wanderers_powerpal)
 
 "-------------------------CREATE CLASS ------------------------------------------------------------------------------"
@@ -14,7 +14,7 @@ class Wanderer:
      - a constructor for wanderers (class objects) and a string representation
      - some basic methods for basic information of the class objects
      - some helping method for a fight between wanderers (the "outer" fight method)
-     - the "outer" fight method itself (calling the "inner" fight method pokeduel_main
+     - the "outer" fight method itself (calling the "inner" fight method powerduel_main
      - the "inner" fight method and a helping method
      - two "post-fight" methods to level up and heal powerpal at the nursery
     """
@@ -193,7 +193,7 @@ class Wanderer:
             # opponent keeps deploying his powerpal in inner loop
             your_powerpal_still_alive = True
             while your_powerpal_still_alive and len(wanderer_opponent.powerpal_list) > 0:
-                defeated_powerpal = self.pokeduel_main(chosen_powerpal, wanderer_opponent.powerpal_list[0])
+                defeated_powerpal = self.powerduel_main(chosen_powerpal, wanderer_opponent.powerpal_list[0])
                 if defeated_powerpal == wanderer_opponent.powerpal_list[0]:
                     wanderer_opponent.powerpal_list.pop(0)
                     if wanderer_opponent.powerpal_list:
@@ -224,11 +224,11 @@ class Wanderer:
         print(f"Nooooooo....You lost the fight! Better find a nursery to heal your powerpals!")
         return "fight lost"
 
-    '-----------------------"inner" fight method": pokeduel_main + helper method---------------------------------'
+    '-----------------------"inner" fight method": powerduel_main + helper method---------------------------------'
 
-    def pokeduel_determine_attack_mode(self, opponent_wanderer_is_choosing: bool = False) -> str:
+    def powerduel_determine_attack_mode(self, opponent_wanderer_is_choosing: bool = False) -> str:
         """This method serves to let the player define the attack mode ("l" or "h") for an attack within the
-        pokeduel_main fight method ("inner" fight method thas is called from "outer" fight method fight_wanderer),
+        powerduel_main fight method ("inner" fight method thas is called from "outer" fight method fight_wanderer),
          or to quit.
         It also determines an arbitrarily chosen mode ("l" or "h"), if the opponent wanderer is choosing.
         :param: self (object of class wanderer); opponent_wanderer_is_choosing (bool)
@@ -242,12 +242,12 @@ class Wanderer:
                 chosen_attack_mode = "h"
         else:
             # get validated input for chosen attack mode
-            chosen_attack_mode = input_for_pokeduel_determine_attack_mode.validated_input()
+            chosen_attack_mode = input_for_powerduel_determine_attack_mode.validated_input()
 
         console.game.clear_terminal()
         return chosen_attack_mode
 
-    def pokeduel_main(self, player_powerpal: pk, opponent_powerpal: pk) -> pk or str:
+    def powerduel_main(self, player_powerpal: pk, opponent_powerpal: pk) -> pk or str:
         """Fight method for a pair of powerpal (one of player's, one of opposing wanderer's).
         It is the "inner" fight method for pairing powerpal, that is called from the "outer" fight method fight_wanderer.
         :param: self (class object twanderer); player_powerpal (class object powerpal); opponent_powerpal (class object powerpal)
@@ -265,7 +265,7 @@ class Wanderer:
             # step 1 - player's move
 
             # step 1.1 - get attack_mode
-            attack_mode = self.pokeduel_determine_attack_mode()
+            attack_mode = self.powerduel_determine_attack_mode()
             if attack_mode == "flight":
                 return "no powerpal defeated, flight"
 
@@ -292,7 +292,7 @@ class Wanderer:
             console.game.clear_terminal()
 
             # step 2.1 - get attack_mode
-            attack_mode = self.pokeduel_determine_attack_mode(opponent_wanderer_is_choosing=True)
+            attack_mode = self.powerduel_determine_attack_mode(opponent_wanderer_is_choosing=True)
 
             # step 2.2 - execute attack
             if attack_mode == "h":

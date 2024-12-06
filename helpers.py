@@ -91,14 +91,14 @@ input_for_fight_decision = Helpers('[Type ' + Helpers.formatted_text("fight", "b
 input_for_choose_undefeated_powerpal = Helpers("\nEnter the id of the powerpal you want to send into the fight!\n"
               "[Type " + Helpers.formatted_text("id", "blue") + ", press Enter] >> ")
 
-input_for_pokeduel_determine_attack_mode = Helpers('\nWhich attack do you want to use?\n[Type '
-                                           + Helpers.formatted_text("l", "blue")
-                                           + ' = light attack, '
-                                           + Helpers.formatted_text("h", "blue")
-                                           + ' = heavy attack or '
-                                           + Helpers.formatted_text("flight", "blue")
-                                           + ' to run for your life, then Enter] >> ',
-                                                   ["l", "h", "flight"])
+input_for_powerduel_determine_attack_mode = Helpers('\nWhich attack do you want to use?\n[Type '
+                                                    + Helpers.formatted_text("l", "blue")
+                                                    + ' = light attack, '
+                                                    + Helpers.formatted_text("h", "blue")
+                                                    + ' = heavy attack or '
+                                                    + Helpers.formatted_text("flight", "blue")
+                                                    + ' to run for your life, then Enter] >> ',
+                                                    ["l", "h", "flight"])
 input_for_heal_wanderers_powerpal = Helpers("Do you want to heal your powerpals?\n"
               "[Type " + Helpers.formatted_text("yes", "blue") + " to heal or "
                         + Helpers.formatted_text("no", "blue") + " to not heal, then press Enter] ",
