@@ -2,5 +2,15 @@
 Contains my first python project - a 2D-rpg (role play game) where you wander a small map encountering enemies and fighting round based fight. Python, terminal-based. Lots of fun!
 
 To play the game, import project files in a single root:
-- 
-Start main.py
+- class_powerpal.py
+- class_wanderer.py
+- console.py
+- helpers.py
+- main.py
+- map.py
+- powerpal_art.py 
+
+Start main.py. Best, start in terminal directly (running in console does not allow "static" UI, as screen clearing functions are not available there).
+For the gameplay, you will find all the instructions in the game itself!
+
+Enjoy playing!
