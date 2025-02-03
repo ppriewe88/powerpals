@@ -14,3 +14,8 @@ Start main.py. Best, start in terminal directly (running in console does not all
 For the gameplay, you will find all the instructions in the game itself!
 
 Enjoy playing!
+
+If you prefer to have a rather high level impression of the project, check out the project documentation or the gameplay flowchart!
+
+Best,
+Patrick
