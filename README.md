@@ -1,21 +1,32 @@
-# powerpals
-Contains my first python project - a 2D-rpg (role play game) where you wander a small map encountering enemies and fighting round based fights. Python, terminal-based. Lots of fun!
+# PowerPals
 
-To play the game, import project files in a single root:
-- class_powerpal.py
-- class_wanderer.py
-- console.py
-- helpers.py
-- main.py
-- map.py
-- powerpal_art.py 
+Contains my first Python project – a 2D-RPG (role-playing game) where you wander a small map, encountering enemies and fighting round-based battles. Python, terminal-based. Lots of fun!  
 
-Start main.py. Best, start in terminal directly (running in console does not allow "static" UI, as screen clearing functions are not available there).
-For the gameplay, you will find all the instructions in the game itself!
+## How to Play  
 
-Enjoy playing!
+To play the game, import all project files into a single root directory:  
 
-If you prefer to have a rather high level impression of the project, check out the project documentation or the gameplay flowchart!
+- `class_powerpal.py`  
+- `class_wanderer.py`  
+- `console.py`  
+- `helpers.py`  
+- `main.py`  
+- `map.py`  
+- `powerpal_art.py`  
 
-Best,
-Patrick
+Start `main.py`.  
+**Tip:** It's best to run it directly in the terminal, as running in a console does not allow a "static" UI (screen clearing functions are not available there).  
+
+## Gameplay  
+
+You'll find all instructions within the game itself. Enjoy playing!  
+
+## Additional Information  
+
+If you prefer a high-level impression of the project, check out the **project documentation** or the **gameplay flowchart**.  
+
+👉 **There is also a short DEMO VIDEO available! Easy to find, have a look!**  
+
+Best,  
+Patrick  
+
